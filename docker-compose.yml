@@ -1,0 +1,29 @@
+version: '3'
+services:
+   mdbos:
+       image: mysql:5.7
+       volumes:
+            - mydb_storage_new:/var/lib/mysql
+       restart: always
+       environment : 
+             	MYSQL_ROOT_PASSWORD: rootpass
+                     MYSQL_USER:  mukesh
+                     MYSQL_PASSWORD: mukesh@1
+                     MYSQL_DATABASE: opencar
+    opencar: 
+          image: aamservices/opencart:latest
+          volumes:
+                  - opencart_html:/var/www
+          restart: always
+          dependes_on:
+                    -mdbos
+          ports:
+                   -8082:80
+          environment:
+               OPENCART_HOST: mdbos
+               OPENCART_DATABASE_USER: mukesh
+               OPENCART_DATABASE_PASSWORD:  mukesh@1
+               OPENCART_DATABASE_NAME: opencar
+volumes:
+          opencart_html:
+          mydb_storage_new:         
