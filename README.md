@@ -5,7 +5,7 @@ Create this project after complete docker training on iice dot.
 This project on opencart that is a online store management. Project is capabale for store management with one click.
 
 ### what is the opencart 
-OpenCart is an online store management system. It is PHP-based, using a MySQL database and HTML components. Support is provided for different languages and currencies. As of May 2016, 342,000 websites were using OpenCart.
+OpenCart is an online store management system. It is PHP-based, using a MySQL database and HTML components. Support is provided for different languages and currencies.
 
 ### Technology used
 Docker(Containerization technology) on Red Hat Enterprise Linux 8. 
